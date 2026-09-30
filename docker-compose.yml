@@ -1,0 +1,23 @@
+services:
+  honeypot:
+    build: .
+    container_name: honeytoken-sentinel
+    ports:
+      - "5000:5000"
+    environment:
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN:-}
+      TELEGRAM_CHAT_ID: ${TELEGRAM_CHAT_ID:-}
+      FLASK_SECRET_KEY: ${FLASK_SECRET_KEY:-}
+      DATABASE_PATH: /app/data/honeypot.db
+      LOCKDOWN_FILE: /app/data/lockdown.flag
+    volumes:
+      - honeypot_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  honeypot_data:
