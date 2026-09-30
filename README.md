@@ -2,6 +2,11 @@
 
 > An educational, defensive web honeypot that plants synthetic decoy credentials in SQLite, presents a corporate-style login page, and can alert defenders via Telegram when a decoy is used. A Telegram button can activate the login-page kill switch.
 
+<img width="834" height="811" alt="Screenshot (895)" src="https://github.com/user-attachments/assets/ddea2882-ec71-413e-a6cf-a0cfab601096" />
+<img width="1389" height="907" alt="Screenshot (892)" src="https://github.com/user-attachments/assets/7be84656-b491-44c5-8616-d06b1d2cb3c7" />
+<img width="954" height="820" alt="Screenshot (891)" src="https://github.com/user-attachments/assets/b9a3a8c5-d385-4dca-9695-c0bcb9d0f573" />
+
+
 ---
 
 ## Why It Matters
