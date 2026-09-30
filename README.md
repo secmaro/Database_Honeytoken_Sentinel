@@ -71,25 +71,28 @@ sequenceDiagram
 ## Quick Start & Installation
 
 ### Prerequisites
-- Python 3.9+ **OR** Docker
-- Telegram Bot Token (from `@BotFather`)
+- Python 3.9+ **or** Docker Desktop with Docker Compose
 - Telegram Bot Token and Chat ID (optional; required only for Telegram alerts and the remote kill switch)
 
 ### Option 1: Docker (Recommended) 🐳
 
+On Windows, start Docker Desktop and wait until its engine is running before using Compose. You can check that Compose is available with `docker compose version`.
+
 ```bash
-git clone https://github.com/your-username/honeytoken-sentinel.git
-cd honeytoken-sentinel
+git clone https://github.com/secmaro/database_web_honeypot.git
+cd database_web_honeypot
 docker compose up --build
 ```
 
 The app is available at **http://localhost:5000**. Compose works without a `.env` file; Telegram features remain disabled until credentials are configured. To enable them, copy `.env.example` to `.env` and fill in your own bot token, chat ID, and a randomly generated Flask secret key, then restart Compose. Do not commit `.env`.
 
+If Compose reports that it cannot connect to `dockerDesktopLinuxEngine` or the Docker API, start or restart Docker Desktop, wait for the engine to finish starting, then rerun `docker compose up --build` from the `database_web_honeypot` folder.
+
 ### Option 2: Local Installation
 
 ```bash
-git clone https://github.com/your-username/honeytoken-sentinel.git
-cd honeytoken-sentinel
+git clone https://github.com/secmaro/database_web_honeypot.git
+cd database_web_honeypot
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -115,7 +118,7 @@ The seeded email identities use the reserved `example.com` domain, and each inst
 ## Project Structure
 
 ```text
-honeytoken-sentinel/
+database_web_honeypot/
 ├── app.py                # Main Flask application (routes, login logic, kill switch)
 ├── config.py             # Configuration loader (reads .env)
 ├── seed_db.py            # Database seeder (decoy accounts + fake audit trail)
