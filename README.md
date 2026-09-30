@@ -6,7 +6,7 @@
   <tr>
     <td width="33%"><img src="https://github.com/user-attachments/assets/ddea2882-ec71-413e-a6cf-a0cfab601096" alt="Screenshot 1" width="100%"></td>
     <td width="33%"><img src="https://github.com/user-attachments/assets/7be84656-b491-44c5-8616-d06b1d2cb3c7" alt="Screenshot 2" width="100%"></td>
-    <td width="33%"><img src="https://github.com/user-attachments/assets/b9a1a8c5-d185-4dca-9695-c8bcb9d01573" alt="Screenshot 3" width="100%"></td>
+    <td width="33%"><img src="https://github.com/user-attachments/assets/e72ef8b7-e243-403e-931a-9b0fdaec0c8e" alt="Screenshot 3" width="100%"></td>
   </tr>
 </table>
 
